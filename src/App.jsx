@@ -103,7 +103,6 @@ const portfolioData = {
     { name: "Linux", percentage: 75, icon: <FaTerminal size={32} className="text-light" /> }
   ],
 
-  // UPDATED PROJECTS STRUCTURE: Added unique icons to the 'list' items
   projectCategories: [
     {
       id: "cloud",
@@ -878,13 +877,26 @@ const pages = {
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
+  const [bgLoaded, setBgLoaded] = useState(false); // New state for image
   const [activePage, setActivePage] = useState('home');
   const [direction, setDirection] = useState('bottom');
   const [key, setKey] = useState(0);
   const [showExplore, setShowExplore] = useState(false);
   const [line1, setLine1] = useState('');
 
+  // 1. Preload Background Image
   useEffect(() => {
+    const img = new Image();
+    img.src = themeConfig.bgImage;
+    img.onload = () => {
+      setBgLoaded(true);
+    };
+  }, []);
+
+  // 2. Typing Effect (Waits for bgLoaded)
+  useEffect(() => {
+    if (!bgLoaded) return; // Stop if image isn't loaded
+
     const text1 = "Welcome to the portfolio of";
     let timer;
     const typeWriter = (i1) => {
@@ -898,13 +910,11 @@ const Home = () => {
     };
     timer = setTimeout(() => typeWriter(0), 500);
     return () => clearTimeout(timer);
-  }, []);
+  }, [bgLoaded]);
 
   useEffect(() => {
     if (!document.querySelector('link[href*="bootstrap"]')) {
       const link = document.createElement('link');
-      link.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css";
-      link.rel = "stylesheet";
       link.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css";
       link.rel = "stylesheet";
       document.head.appendChild(link);
@@ -945,15 +955,23 @@ const Home = () => {
     <div className="position-relative w-100 vh-100 overflow-hidden text-white bg-black" style={{ fontFamily: "'Nunito', sans-serif" }}>
       <style>{styles}</style>
 
+      {/* 0. Black Screen until Image Loads (Prevents flash of empty content) */}
+      {!bgLoaded && (
+        <div className="position-fixed top-0 start-0 w-100 h-100 bg-black z-3" style={{ zIndex: 10000 }} />
+      )}
+
       {/* Backgrounds */}
       <div className="position-fixed top-0 start-0 w-100 h-100 z-0 bg-cover-center" style={{ backgroundImage: `url("${themeConfig.bgImage}")`, filter: 'brightness(0.9) blur(3px)', transition: 'transform 10s ease' }} />
       <div className="position-fixed top-0 start-0 w-100 h-100 z-0 pe-none" style={{ background: 'linear-gradient(to bottom right, rgba(30,58,138,0.4), transparent, rgba(0,0,0,0.8))' }} />
 
-      {/* Loading */}
-      {loading && (
-        <div className="position-fixed top-0 start-0 w-100 h-100 z-3 d-flex align-items-center justify-content-center" style={{ zIndex: 9999, backdropFilter: 'blur(20px)', backgroundColor: 'rgba(0,0,0,0.85)' }}>
+      {/* Loading (Typing Text) - Now transparent so background is visible */}
+      {loading && bgLoaded && (
+        <div className="position-fixed top-0 start-0 w-100 h-100 z-3 d-flex align-items-center justify-content-center" 
+             style={{ zIndex: 9999, backdropFilter: 'blur(8px)', backgroundColor: 'rgba(0,0,0,0.6)', transition: 'opacity 0.5s ease' }}>
           <div className="text-center">
-            <p className="h4 text-uppercase letter-spacing-2 text-white mb-3 panther" style={{ letterSpacing: '2px', minHeight: '1.5em' }}>{line1}<span className="typing-cursor"></span></p>
+            <p className="h4 text-uppercase letter-spacing-2 text-white mb-3 panther" style={{ letterSpacing: '2px', minHeight: '1.5em' }}>
+              {line1}<span className="typing-cursor"></span>
+            </p>
           </div>
         </div>
       )}
