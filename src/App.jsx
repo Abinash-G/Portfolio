@@ -581,9 +581,9 @@ const ProjectExplorer = ({ categories }) => {
 
   // Default View: Show Categories
   return (
-    <div className="container py-5 fade-in-content">
-      <h2 className="display-5 fw-bold mb-5 text-white snap-in panther" style={{ '--r': '0deg', '--x': '0px', '--y': '-40px', animationDelay: '0.1s' }}>Featured Projects</h2>
-      <div className="row g-4">
+    <div className="container py-5 fade-in-content text-center">
+      <h2 className="display-5 fw-bold mb-5 text-white snap-in aquatico" style={{ '--r': '0deg', '--x': '0px', '--y': '-40px', animationDelay: '0.1s' }}>My Projects</h2>
+      <div className="row g-4 justify-content-center">
         {categories.map((item, i) => {
           const angle = (i % 2 === 0 ? -3 : 3) + (i % 3 === 0 ? 2 : -2);
           const tx = (i % 2 === 0 ? 10 : -10);
@@ -633,7 +633,7 @@ const pages = {
     animationDirection: 'top-left',
     exploreContent: (
       <div className="container text-center py-5">
-        <h2 className="display-4 fw-bold mb-5 text-white snap-in" style={{ '--r': '-5deg', '--x': '0px', '--y': '-50px', animationDelay: '0.1s' }}>My Philosophy</h2>
+        <h2 className="display-4 fw-bold mb-5 text-white snap-in aquatico" style={{ '--r': '-5deg', '--x': '0px', '--y': '-50px', animationDelay: '0.1s' }}>My Philosophy</h2>
         <div className="row g-4">
           {portfolioData.philosophy.map((item, i) => {
             const angle = (i % 2 === 0 ? 15 : -15) + (i * 5);
@@ -845,7 +845,7 @@ const pages = {
     animationDirection: 'bottom-right',
     exploreContent: (
       <div className="container py-5 text-center">
-        <h2 className="display-5 fw-bold text-white mb-5 snap-in panther" style={{ '--r': '0deg', '--x': '0px', '--y': '-40px', animationDelay: '0.1s' }}>Connect With Me</h2>
+        <h2 className="display-5 fw-bold text-white mb-5 snap-in aquatico" style={{ '--r': '0deg', '--x': '0px', '--y': '-40px', animationDelay: '0.1s' }}>Connect With Me</h2>
         <div className="row g-4 justify-content-center">
           {portfolioData.socials.map((social, i) => {
             const angle = (i % 2 === 0 ? 3 : -3);
