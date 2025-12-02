@@ -184,7 +184,7 @@ const portfolioData = {
 };
 
 const themeConfig = {
-  bgImage: "https://www.hdwallpapers.in/download/calm_body_of_water_beach_with_slanting_palm_tree_with_reflection_on_beach_sand_4k_hd_beach-HD.jpg"
+  bgImage: "https://www.hdwallpapers.in/download/calm_body_of_water_beach_with_slanting_palm_tree_with_reflection_on_beach_sand_4k_hd_beach-1280x720.jpg"
 };
 
 const styles = `
