@@ -447,7 +447,10 @@ const styles = `
 .text-shadow { text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
 .explore-overlay {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2000;
-    background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(25px); overflow-y: auto;
+    background: rgba(0, 0, 0, 0.9); overflow-y: auto;
+}
+.main-container {
+    max-width: 75vw;
 }
 
 @media (max-width: 768px) {
@@ -469,6 +472,13 @@ const styles = `
         border: 1px solid rgba(255, 255, 255, 0.15);
         height: auto;
         gap: 10px;
+    }
+
+    .main-container {
+        max-width: 100vw !important;
+        width: 100% !important;
+        padding-left: 10px;  /* Prevent edge touching */
+        padding-right: 10px;
     }
 
     .glass-button {
@@ -1076,7 +1086,7 @@ const Home = () => {
             className={`main-content-wrapper position-absolute top-0 start-0 w-100 h-100 z-1 d-flex align-items-center justify-content-center p-3 ${getAnimationClass()}`}
             style={{ backgroundColor: 'rgba(0,0,0,0.0)', backdropFilter: 'blur(2px)' }}
           >
-            <div className="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 gap-md-5" style={{ maxWidth: '75vw' }}>
+            <div className="main-container container-fluid d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 gap-md-5">
 
               {/* Desktop Big Icon */}
               <div className="d-none d-md-flex glass-panel p-5 rounded-circle shadow-lg text-info">
