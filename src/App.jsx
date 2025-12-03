@@ -213,36 +213,36 @@ const styles = `
 
 /* Animation Keyframes */
 @keyframes slideInFromRight {
-    0% { opacity: 0; transform: translateX(100%) scale(0.9) skewX(-10deg); filter: blur(3px); }
-    100% { opacity: 1; transform: translateX(0) scale(1) skewX(0); filter: blur(0); }
+    0% { opacity: 0; transform: translateX(100%) scale(0.7); }
+    100% { opacity: 1; transform: translateX(0) scale(1) skewX(0); }
 }
 @keyframes slideInFromLeft {
-    0% { opacity: 0; transform: translateX(-100%) scale(0.9) skewX(10deg); filter: blur(3px); }
-    100% { opacity: 1; transform: translateX(0) scale(1) skewX(0); filter: blur(0); }
+    0% { opacity: 0; transform: translateX(-100%) scale(0.7); }
+    100% { opacity: 1; transform: translateX(0) scale(1) skewX(0); }
 }
 @keyframes slideInFromTopLeft {
-    0% { opacity: 0; transform: translate(-100%, -25%) scale(0.9); filter: blur(3px); }
-    100% { opacity: 1; transform: translate(0, 0) scale(1); filter: blur(0); }
+    0% { opacity: 0; transform: translate(-100%, -25%) scale(0.7); }
+    100% { opacity: 1; transform: translate(0, 0) scale(1); }
 }
 @keyframes slideInFromBottomLeft {
-    0% { opacity: 0; transform: translate(-100%, 25%) scale(0.9); filter: blur(3px); }
-    100% { opacity: 1; transform: translate(0, 0) scale(1); filter: blur(0); }
+    0% { opacity: 0; transform: translate(-100%, 25%) scale(0.7); }
+    100% { opacity: 1; transform: translate(0, 0) scale(1); }
 }
 @keyframes slideInFromTopRight {
-    0% { opacity: 0; transform: translate(100%, -25%) scale(0.9); filter: blur(3px); }
-    100% { opacity: 1; transform: translate(0, 0) scale(1); filter: blur(0); }
+    0% { opacity: 0; transform: translate(100%, -25%) scale(0.7); }
+    100% { opacity: 1; transform: translate(0, 0) scale(1); }
 }
 @keyframes slideInFromBottomRight {
-    0% { opacity: 0; transform: translate(100%, 25%) scale(0.9); filter: blur(20px); }
-    100% { opacity: 1; transform: translate(0, 0) scale(1); filter: blur(0); }
+    0% { opacity: 0; transform: translate(100%, 25%) scale(0.7); }
+    100% { opacity: 1; transform: translate(0, 0) scale(1); }
 }
 @keyframes slideInFromBottom {
-    0% { opacity: 0; transform: translateY(100vh) scale(0.9); filter: blur(10px); }
-    100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+    0% { opacity: 0; transform: translateY(100vh) scale(0.7);}
+    100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 @keyframes slideInFromTop {
-    0% { opacity: 0; transform: translateY(-100vh) scale(0.9); filter: blur(10px); }
-    100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+    0% { opacity: 0; transform: translateY(-100vh) scale(0.7); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 @keyframes blink {
     0%, 100% { opacity: 1; }
@@ -1076,7 +1076,7 @@ const Home = () => {
             className={`main-content-wrapper position-absolute top-0 start-0 w-100 h-100 z-1 d-flex align-items-center justify-content-center p-3 ${getAnimationClass()}`}
             style={{ backgroundColor: 'rgba(0,0,0,0.0)', backdropFilter: 'blur(2px)' }}
           >
-            <div className="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 gap-md-5" style={{ maxWidth: '1000px' }}>
+            <div className="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 gap-md-5" style={{ maxWidth: '75vw' }}>
 
               {/* Desktop Big Icon */}
               <div className="d-none d-md-flex glass-panel p-5 rounded-circle shadow-lg text-info">
@@ -1089,7 +1089,7 @@ const Home = () => {
               </div>
 
               {/* Text Card (Auto Adjust for Mobile) */}
-              <div className="glass-panel content-glass-card w-100 p-4 p-md-5 rounded-4 d-flex flex-column align-items-start position-relative text-start">
+              <div className="glass-panel content-glass-card mw-100 p-4 p-md-5 rounded-4 d-flex flex-column align-items-start position-relative text-start">
 
                 <span className="badge bg-primary bg-opacity-25 text-white mb-3 px-3 py-2 text-uppercase letter-spacing-2">
                   {activePage === 'home' ? 'PORTFOLIO' : activePage}
