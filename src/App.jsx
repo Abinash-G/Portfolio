@@ -42,7 +42,11 @@ import {
   FaLock,
   FaDatabase,
   FaUserCircle,
-  FaChevronLeft
+  FaChevronLeft,
+  FaWindows,
+  FaChrome,
+  FaCube,
+  FaReact
 } from 'react-icons/fa';
 import { FaAtlassian, FaFileLines, FaFloppyDisk, FaHouseChimneyUser, FaSquareArrowUpRight, FaXmark, FaXTwitter } from 'react-icons/fa6';
 
@@ -111,17 +115,21 @@ const portfolioData = {
       desc: "AWS & Cloud Infrastructure",
       list: [
         { title: "S3 Website Hosting", icon: <FaAws size={28} className="text-warning" />, desc: "Hosted a static website on Amazon S3.", link: "https://abi-gaming.s3.ap-south-1.amazonaws.com/index.html" },
-        { title: "EC2 Instance Setup", icon: <FaServer size={28} className="text-light" />, desc: "Configured a Linux web server on AWS EC2.", link: "#" },
+        { title: "EC2 Instance PAAS Setup", icon: <FaWindows size={28} className="text-primary" />, desc: "Configured a Windows,Linux and other OS's as web server on AWS EC2.", link: "#" },
+        { title: "EC2 Instance IAAS Setup", icon: <FaServer size={28} className="text-light" />, desc: "Configured an Infrastructure as web server on AWS EC2.", link: "#" },
+        { title: "EC2 Instance SAAS Setup", icon: <FaChrome size={28} className="text-info" />, desc: "Configured a Specific Software as web server on AWS EC2.", link: "#" },
+        { title: "Amazon EBS", icon: <FaCube size={28} className="text-info" />, desc: "Created an elastic block volume and expanded partition's volume of OS", link: "#" },
       ]
     },
     {
       id: "frontend",
       title: "Front End",
       icon: <FaGamepad size={32} className="text-warning" />,
-      desc: "React & Interactive UI",
+      desc: "Cool Interactive UI's",
       list: [
         { title: "Gaming Website", icon: <FaGamepad size={28} className="text-danger" />, desc: "A stylish and immersive gaming-themed site.", link: "https://abinash-g.github.io/gaming-site/Login.html" },
-        { title: "Dashboard UI", icon: <FaChartPie size={28} className="text-info" />, desc: "A clean glassmorphism dashboard concept.", link: "#" }
+        { title: "Portfolio", icon: <FaReact size={28} className="text-primary" />, desc: "A clean portfolio using React JS", link: "https://abinash-g.github.io/Portfolio/" },
+        { title: "Dashboard UI", icon: <FaChartPie size={28} className="text-info" />, desc: "A clean glassmorphism dashboard concept.", link: "#" },
       ]
     },
     {
@@ -154,7 +162,7 @@ const portfolioData = {
     {
       id: "python",
       title: "Python",
-      icon: <FaPython size={32} className="text-warning" />,
+      icon: <FaPython size={32} className="text-light" />,
       desc: "Automation Scripts",
       list: [
         { title: "Data Scraper", icon: <FaRobot size={28} className="text-info" />, desc: "Script that automates web data extraction.", link: "#" },
