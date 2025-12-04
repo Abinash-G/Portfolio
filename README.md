@@ -7,6 +7,10 @@ Showcasing my skills, projects, resume, and who I am — all in one place ✨
 
 ---
 
+## 🌐 Live Demo  
+[Experience Here →](https://abinash-g.github.io/Portfolio/)
+
+---
 ## ✨ Features
 - ⚡ Smooth page animations
 - 🧊 Glassmorphism design
