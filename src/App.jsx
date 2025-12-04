@@ -46,7 +46,8 @@ import {
   FaWindows,
   FaChrome,
   FaCube,
-  FaReact
+  FaReact,
+  FaLeaf
 } from 'react-icons/fa';
 import { FaAtlassian, FaFileLines, FaFloppyDisk, FaHouseChimneyUser, FaSquareArrowUpRight, FaXmark, FaXTwitter } from 'react-icons/fa6';
 
@@ -129,6 +130,7 @@ const portfolioData = {
       list: [
         { title: "Gaming Website", icon: <FaGamepad size={28} className="text-danger" />, desc: "A stylish and immersive gaming-themed site.", link: "https://abinash-g.github.io/gaming-site/Login.html" },
         { title: "Portfolio", icon: <FaReact size={28} className="text-primary" />, desc: "A clean portfolio using React JS", link: "https://abinash-g.github.io/Portfolio/" },
+        { title: "Groceries Cart", icon: <FaLeaf size={28} className="text-success" />, desc: "A minimalistic Shopping Cart UI/UX", link: "https://abinash-g.github.io/Minimal-cart-UI/" },
         { title: "Dashboard UI", icon: <FaChartPie size={28} className="text-info" />, desc: "A clean glassmorphism dashboard concept.", link: "#" },
       ]
     },
