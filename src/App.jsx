@@ -10,7 +10,6 @@ import {
   FaLinkedin,
   FaTwitter,
   FaTimes,
-  FaDownload,
   FaExternalLinkAlt,
   FaChevronDown,
   FaCloud,
