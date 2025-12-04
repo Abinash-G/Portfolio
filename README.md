@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/e16f075e-2a03-42d8-b56e-f05c4f7d2e7f" alt="Portfolio Banner" width="100%" />
-</p>
-
 # 🌐 Personal Portfolio – Abinash
 
 A sleek, animated and fully responsive personal portfolio built using **React**, **Bootstrap 5**, and **Glassmorphism** UI.  
