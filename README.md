@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="[banner.png](https://github.com/user-attachments/assets/e16f075e-2a03-42d8-b56e-f05c4f7d2e7f)" alt="Portfolio Banner" width="100%" />
+  <img src="https://github.com/user-attachments/assets/e16f075e-2a03-42d8-b56e-f05c4f7d2e7f" alt="Portfolio Banner" width="100%" />
 </p>
 
 # 🌐 Personal Portfolio – Abinash
